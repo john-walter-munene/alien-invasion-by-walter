@@ -3,6 +3,7 @@ from pygame.sprite import Group
 from bullet import Bullet
 from settings import Settings   
 from game_stats import GameStatistics
+from scoreboard import Scoreboard
 from button import Button
 from ship import Ship
 import game_functions as gf
@@ -15,11 +16,13 @@ def run_game():
     pygame.display.set_caption("Alien Invasion by Walter")
 
     play_button = Button(ai_settings, screen, "Play")
-
-    #create an instance to store game settings
+    
+    # Create an instance to store game statistics and make a scoreboard
+    # Create an instance to store game settings
     stats = GameStatistics(ai_settings)
+    sb = Scoreboard(ai_settings, screen, stats)
 
-    #make a ship, group of bullets and group of aliens.
+    # Make a ship, group of bullets and group of aliens.
     ship = Ship(ai_settings, screen)
     bullets = Group()
     aliens = Group()
@@ -36,7 +39,7 @@ def run_game():
             gf.update_bullets(ai_settings, screen, ship, aliens, bullets)
             gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
 
-        gf.update_screen(ai_settings, screen, stats, ship, aliens, bullets, play_button)
+        gf.update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button)
 
         # Make the most recently drawn screen visible.
         pygame.display.flip()
