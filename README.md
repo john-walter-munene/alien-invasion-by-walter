@@ -1,8 +1,8 @@
 # alien-invasion-by-walter
-# To run the game, please ensure yo have already installed the following:
-# Python 3, and pygame environment.
-# To play the game, Click run the alien_invasion_12.py file as it contains the main game, all other files are classes and functions to run the game. 
-# Feel free to open issues or reach out at midwaymaster10@gmail.com
+To run the game, please ensure yo have already installed the following:
+Python 3, and pygame environment.
+To play the game, Click run the alien_invasion_12.py file as it contains the main game, all other files are classes and functions to run the game. 
+Feel free to open issues or reach out at midwaymaster10@gmail.com
 
 In Alien Invasion, the player controls a ship that appears at 
 the bottom center of the screen. The player can move the ship 
